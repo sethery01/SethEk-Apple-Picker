@@ -276,8 +276,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -322,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1419588089772482502, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1419588089772482502, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -359,6 +359,10 @@ PrefabInstance:
     - target: {fileID: 6697388244162410462, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780150714070554604, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
