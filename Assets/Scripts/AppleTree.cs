@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class AppleTree : MonoBehaviour
 {
-    [Header("Inscribed")]
+    [Header("Inscribed Difficulty Levels")]
+    public float[] speedLevels;                 
+    public float[] changeDirChanceLevels;      
+    public float[] appleDropDelayLevels;       
+
+    [Header("Runtime Settings")]
+    public int currentLevel = 0;               
+
     public GameObject applePrefab;
-    public float speed = 1f;
     public float leftAndRightEdge = 10f;
-    public float changeDirChance = 0.1f;
-    public float appleDropDelay = 1f;
+
+    private float speed;
+    private float changeDirChance;
+    private float appleDropDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -51,5 +59,14 @@ public class AppleTree : MonoBehaviour
         {
             speed *= -1;
         }
+    }
+
+    public void SetDifficulty(int level)
+    {
+        currentLevel = Mathf.Clamp(level, 0, speedLevels.Length - 1);
+
+        speed = speedLevels[currentLevel];
+        changeDirChance = changeDirChanceLevels[currentLevel];
+        appleDropDelay = appleDropDelayLevels[currentLevel];
     }
 }

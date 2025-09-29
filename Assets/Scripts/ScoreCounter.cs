@@ -7,6 +7,8 @@ public class ScoreCounter : MonoBehaviour
 {
     [Header("Dynamic")]                                                          // b
     public int score = 0;
+    public int level = 0;
+    public int pointsPerLevel = 500;
 
     private Text uiText;                                                        // c
 
@@ -17,6 +19,7 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-        uiText.text = score.ToString("#,0"); // This 0 is a zero!              // e
+        level = score / pointsPerLevel;
+        uiText.text = "Level: " + level + " Score: " + score.ToString("#,0");
     }
 }

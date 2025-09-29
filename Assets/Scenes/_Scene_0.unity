@@ -215,6 +215,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetHighScoreNow: 0
+--- !u!114 &665251109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+  m_PrefabInstance: {fileID: 2396020265557647183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f58ac1a97fe6244a8473a5097706f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  level: 0
+  pointsPerLevel: 500
 --- !u!1 &820934898
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +593,52 @@ MonoBehaviour:
   basketBottomY: -14
   basketSpacingY: 2
   basketList: []
+--- !u!1 &1749427825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749427827}
+  - component: {fileID: 1749427826}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1749427826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749427825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 179fb6c4bc83d4a5a8158a09747536a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appleTree: {fileID: 665251109}
+  scoreCounter: {fileID: 800597864}
+--- !u!4 &1749427827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749427825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 738.38556, y: 414.11578, z: -1.0071435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108234090
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,6 +750,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: speedLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: speedLevels.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: speedLevels.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: speedLevels.Array.data[2]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: appleDropDelayLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: changeDirChanceLevels.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: appleDropDelayLevels.Array.data[0]
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: appleDropDelayLevels.Array.data[1]
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: appleDropDelayLevels.Array.data[2]
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: changeDirChanceLevels.Array.data[0]
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: changeDirChanceLevels.Array.data[1]
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -647378431607701614, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
+      propertyPath: changeDirChanceLevels.Array.data[2]
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1419588089772482502, guid: fd211b11b65114f4cb2748bda34a4fef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -749,3 +856,4 @@ SceneRoots:
   - {fileID: 2396020265557647183}
   - {fileID: 2108234094}
   - {fileID: 820934901}
+  - {fileID: 1749427827}
